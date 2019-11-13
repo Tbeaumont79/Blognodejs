@@ -1,0 +1,8 @@
+<%- include("partials/header") %>
+<% posts.forEach((post) => { %>
+  <h1 class="display-4 font-italic"><%=  post.title  %></h1>
+  <p class="lead my-3" ><%=  post.message.substring(0, 100) + " ..."  %>
+  <a href="/post/<%= post.title %>">Read More </a>
+  </p>
+<% }); %>
+<%- include("partials/footer") %>
